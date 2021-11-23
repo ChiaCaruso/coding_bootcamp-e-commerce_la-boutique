@@ -5,6 +5,7 @@
 
 body {
   font-family: "Mohave", sans-serif;
+  margin: 0 auto;
 }
 
 h4 {
@@ -30,6 +31,18 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.wrapper .__hero{
+  height: 450px;
+  width: 100%;
+  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url("./img/hero.png");
+  background-position-y: -220px ;
+}
+
+.wrapper .__hero .intestazione{
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.315);
+  color: #fff;
 }
 
 .wrapper__titles {
