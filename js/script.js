@@ -1,9 +1,9 @@
 
 const wrapHero = document.querySelector(".__hero");
 let images = [
-    "../img/hero.png",
-    "../img/hero2.png",
-    "../img/hero3.png"
+    "./img/hero.png",
+    "./img/hero2.png",
+    "./img/hero3.png"
 ]
 
 var i = 0;
