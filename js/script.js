@@ -1,4 +1,19 @@
-// import { products } from "./products.js";   <== importare la lista prodotti in modo locale
+
+const wrapHero = document.querySelector(".__hero");
+let images = [
+    "../img/hero.png",
+    "../img/hero2.png",
+    "../img/hero3.png"
+]
+
+var i = 0;
+setInterval(function() {
+      wrapHero.style.backgroundImage = "linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(" + images[i] + ")";
+      i = i + 1;
+      if (i == images.length) {
+        i =  0;
+      }
+}, 5000);
 
 function createProduct(parent, imgUrl, productTitle, textPrice) {
   const product = document.createElement("div");

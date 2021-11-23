@@ -1,37 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chiara Caruso">
+    <meta name="description" content="Esercitazione">
+    <meta name="keywords" content="html5, css, JS">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>E-Commerce Coding Bootcamp</title>
+
+</head>
+
   <body>
+
+     <!-- HEADER -->
+
+    <header>
+      <div class="logo">
+        <img src="./img/logo.png" alt="logo" width="100">
+      </div>
+      <nav id="main-menu">
+        <ul>
+          <li><a href="" class="li-active">Shop</a></li>
+          <li><a href="">Chi siamo</a></li>
+          <li><a href="">Contatti</a></li>
+          <li id="cart"><a href=""><img src="./img/cart.png" alt="cart" width="20"></a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <!-- HERO -->
+
     <div class="wrapper">
+
       <div class="__hero">
           <div class="intestazione">
-            <h2>La moda contemporanea</h2>
+            <h2>LA BOUTIQUE</h2>
             <p>lo stile non è opinabile</p>
           </div>
-
       </div>
+
       <div class="wrapper__titles">
         <h2>Lista prodotti Edgemony</h2>
         <h4>Edgemony class</h4>
       </div>
-      <div class="wrapper__products">
-        <!-- <div class="product">
-          <img
-            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-            alt=""
-          />
-          <h4>Fjallraven</h4>
-          <p>109.95$</p>
-        </div> -->
-      </div>
-      <!-- <button class="addBtn">Aggiungi</button> -->
+
+      <div class="wrapper__products"></div>
+
     </div>
-    <script src="./script.js" type="module"></script>
+
+    <footer>
+      <img src="./img/footer.png" alt="logo" width="30" height="30">
+      <p>Designed by Chiara Caruso</p>
+    </footer>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>
