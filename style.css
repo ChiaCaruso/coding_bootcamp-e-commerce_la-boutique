@@ -36,7 +36,7 @@ strong {
 .wrapper .__hero{
   height: 450px;
   width: 100%;
-  background: url("./img/hero.png");
+  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url("./img/hero.png");
   background-position-y: -220px ;
 }
 
