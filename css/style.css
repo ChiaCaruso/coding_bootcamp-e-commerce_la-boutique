@@ -54,6 +54,11 @@ strong {
   width: 80px;
 }
 
+.clearCart{
+  background: none;
+  border: none;
+}
+
 /* ! HEADER */
 
 header{
@@ -189,16 +194,32 @@ header{
 
 /* ! MODALE */
 
-#modale-cart{
-  background: #95a3c3;
-  color: #fff;
-  margin: 50px 120px;
-  padding: 30px 60px 20px;
-  display: flex;
-  justify-content: space-around;
+.modale-cart{
+  position: fixed;
   border-radius: 8px;
+  background: #fff;
+  width: 500px;
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  left: 50%;
+  top: -250%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
 }
 
+.modale-on{
+  box-shadow: 0 0 0 2000px rgb(24 22 22 / 50%);
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);  
+}
+
+.modale-text{
+  text-align: center;
+}
 /* ! FOOTER */
 
 footer{

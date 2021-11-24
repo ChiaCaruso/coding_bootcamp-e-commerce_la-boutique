@@ -35,11 +35,18 @@ function createProduct(parent, imgUrl, productTitle, textPrice, idProduct) {
       )
     );
     setCartProductsNum();
-    alert(`Prodotto aggiunto al carrello, numero prodotti: ${cartList.length}`);
+    
+    const modaleCart = document.querySelector(".modale-cart");
+    const modale = document.querySelector(".modale-text");
+    modaleCart.classList.toggle("modale-on");
+    modale.innerHTML = `Prodotto aggiunto al carrello! <br> Numero prodotti: ${cartList.length}`;
+    setTimeout(() => {modaleCart.classList.toggle("modale-on")}, 2000);
     // Nel caso in cui volessimo aggiungere una interazione col LocalStorage
     localStorage.setItem("totCartitems", cartList.length);
   });
 }
+
+
 
 function createImg(parent, imgUrl, productTitle) {
   const image = document.createElement("img");
