@@ -80,6 +80,11 @@ header{
   transition: transform .2s
 }
 
+#main-menu li p{
+  display: inline-block;
+  margin-left: 10px;
+}
+
 #main-menu li:hover{
   transform: scale(1.1);
 }
@@ -144,7 +149,6 @@ header{
 }
 
 .product {
-  
   border-radius: 12px;
   max-width: 500px;
   height: 500px;
@@ -181,6 +185,18 @@ header{
 
 .product p {
   align-self: flex-start;
+}
+
+/* ! MODALE */
+
+#modale-cart{
+  background: #95a3c3;
+  color: #fff;
+  margin: 50px 120px;
+  padding: 30px 60px 20px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px;
 }
 
 /* ! FOOTER */
