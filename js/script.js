@@ -6,7 +6,7 @@ let images = [
     "./img/hero3.png"
 ]
 
-var i = 0;
+let i = 0;
 setInterval(function() {
       wrapHero.style.backgroundImage = "linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(" + images[i] + ")";
       i = i + 1;
@@ -28,6 +28,10 @@ function createProduct(parent, imgUrl, productTitle, textPrice, idProduct) {
   createText(product, productTitle, textPrice);
   parent.appendChild(product);
 
+
+  const modaleCart = document.querySelector(".modale-cart");
+  const modale = document.querySelector(".modale-text");
+
   product.addEventListener("click", (e) => {
     cartList.push(
       productsList.find(
@@ -36,8 +40,7 @@ function createProduct(parent, imgUrl, productTitle, textPrice, idProduct) {
     );
     setCartProductsNum();
     
-    const modaleCart = document.querySelector(".modale-cart");
-    const modale = document.querySelector(".modale-text");
+
     modaleCart.classList.toggle("modale-on");
     modale.innerHTML = `Prodotto aggiunto al carrello! <br> Numero prodotti: ${cartList.length}`;
     setTimeout(() => {modaleCart.classList.toggle("modale-on")}, 2000);
@@ -45,7 +48,6 @@ function createProduct(parent, imgUrl, productTitle, textPrice, idProduct) {
     localStorage.setItem("totCartitems", cartList.length);
   });
 }
-
 
 
 function createImg(parent, imgUrl, productTitle) {
@@ -104,12 +106,10 @@ const cartBtn = document.querySelector(".cartBtn");
 const cartProductsNum = document.querySelector(".cartProductsNum");
 const clearCartBtn = document.querySelector(".clearCart");
 
-if (localStorageTot === null){
-  localStorageTot = 0;
-}
+
 
 // Flusso generale
-cartProductsNum.textContent = `Numero prodotti: ${localStorageTot}`;
+cartProductsNum.textContent = `Numero prodotti: ${localStorageTot || 0}`;
 getProductsList();
 
 clearCartBtn.addEventListener("click", () => {
