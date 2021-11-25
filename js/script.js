@@ -1,4 +1,4 @@
-
+// Slider Hero
 const wrapHero = document.querySelector(".__hero");
 let images = [
     "./img/hero.png",
@@ -14,6 +14,25 @@ setInterval(function() {
         i =  0;
       }
 }, 5000);
+
+// Slider reviews
+
+const boxReview = document.querySelector("#review");
+const reviewText = document.createElement("p");
+reviewText.className = "text-review";
+boxReview.appendChild(reviewText);
+
+const dataReview = [`"Spedizioni sempre puntuali!"`, `"Sempre una garanzia, ottimi prodotti tutti originali!"`, `"Vasta scelta di prodotti e diverse taglie disponibili"`];
+
+let index = 0;
+setInterval(function() {
+    reviewText.innerHTML = `${dataReview[index]} <br> ⭐⭐⭐`;
+    index = index + 1;
+    if (index == dataReview.length) {
+      index = 0;
+    }
+}, 5000);
+
    
 function setCartProductsNum() {
   cartProductsNum.textContent = `Numero prodotti: ${cartList.length}`;

@@ -133,6 +133,8 @@ header{
   float: right;
 }
 
+/* ! PRODUCTS */
+
 .wrapper__titles {
   margin: 50px 0;
   display: flex;
@@ -192,6 +194,29 @@ header{
   align-self: flex-start;
 }
 
+/* ! REVIEW */
+
+#review{
+  margin: 100px auto;
+  height: 300px;
+  width: 100%;
+  box-shadow: 0 -5px 20px -5px #682d8c, 0 5px 20px -5px #682d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-review{
+  font-style: italic;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+
+  animation-name: opacity;
+  animation-duration: 1s;
+}
+
 /* ! MODALE */
 
 .modale-cart{
@@ -234,4 +259,17 @@ footer{
 footer img{
   margin-right: 15px;
 }
+
+/* ! ANIMATION */
+
+@keyframes opacity {
+
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+} 
 
