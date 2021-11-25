@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Chiara Caruso">
-    <meta name="description" content="Esercitazione">
-    <meta name="keywords" content="html5, css, JS">
+<head>
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Chiara Caruso">
+  <meta name="description" content="Esercitazione">
+  <meta name="keywords" content="html5, css, JS">
 
-    <title>E-Commerce - Edgemony Bootcamp</title>
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200;1,300&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>E-Commerce - Edgemony Bootcamp</title>
 
 </head>
 
-  <body>
+<body>
 
-     <!-- HEADER -->
+  <!-- HEADER -->
 
-    <header>
-      <div class="logo">
-        <img src="./img/logo.png" alt="logo" width="100">
-      </div>
-      <nav id="main-menu">
-        <ul>
-          <li><a href="" class="li-active">Shop</a></li>
-          <li><a href="">Chi siamo</a></li>
-          <li><a href="">Contatti</a></li>
-          <li id="cart">
-            <a href=""><img src="./img/cart.png" alt="cart" width="20"></a>
-            <p class="cartProductsNum">Carrello vuoto</p>
-            <button class="clearCart"><img src="./img/remove.png" alt="cart" width="25"></button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="./img/logo.png" alt="logo" width="100">
+    </div>
+    <nav id="main-menu">
+      <ul>
+        <li><a href="" class="li-active">Shop</a></li>
+        <li><a href="">Chi siamo</a></li>
+        <li><a href="">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- HERO -->
-
-    <div class="wrapper">
-
-      <div class="__hero">
-          <div class="intestazione">
-            <h2>LA BOUTIQUE</h2>
-            <p>lo stile non è opinabile</p>
-          </div>
+  <div class="wrapper">
+    <div class="__hero">
+      <div class="intestazione">
+        <h2>LA BOUTIQUE</h2>
+        <p>lo stile non è opinabile</p>
       </div>
+    </div>
 
-  <!-- PRODUCTS -->
-
-      <div class="wrapper__titles">
-        <h2>Lista prodotti Edgemony</h2>
-        <h4>Edgemony class</h4>
+    <!-- BANNER CART -->
+    <div id="cart-banner">
+      <div class="order-products">
+        <button id="btnAZ" class="btn">A - Z</button>
+        <button id="btnPrice" class="btn">Price Order</button>
       </div>
+      <div class="cart">
+        <a href=""><img src="./img/cart.png" alt="cart" width="20"></a>
+        <p class="cartProductsNum">Carrello vuoto</p>
+        <button class="clearCart"><img src="./img/remove.png" alt="cart" width="25"></button>
+      </div>
+    </div>
 
-      <div class="wrapper__products"></div>
 
-  <!-- REVIEW -->
+    <!-- PRODUCTS -->
+    
+    <div class="wrapper__titles">
+      <h2>Lista prodotti Edgemony</h2>
+      <h4>Edgemony class</h4>
+    </div>
+
+    <div class="wrapper__products"></div>
+
+    <!-- REVIEW -->
 
     <div id="review"></div>
 
-  <!-- MODALE -->
+    <!-- MODALE -->
 
     <div class="modale-cart">
       <p class="modale-text"></p>
     </div>
+  </div>
 
-    <footer>
-      <img src="./img/footer.png" alt="logo" width="30" height="30">
-      <p>Designed by Chiara Caruso</p>
-    </footer>
-    <script src="./js/script.js" type="module"></script>
-  </body>
+  <footer>
+    <img src="./img/footer.png" alt="logo" width="30" height="30">
+    <p>Designed by Chiara Caruso</p>
+  </footer>
+  <script src="./js/script.js" type="module"></script>
+</body>
+
 </html>
