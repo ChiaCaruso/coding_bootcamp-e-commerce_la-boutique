@@ -1,18 +1,18 @@
 // Slider Hero
 const wrapHero = document.querySelector(".__hero");
 let images = [
-    "./img/hero.png",
-    "./img/hero2.png",
-    "./img/hero3.png"
+  "./img/hero.png",
+  "./img/hero2.png",
+  "./img/hero3.png"
 ]
 
 let i = 0;
-setInterval(function() {
-      wrapHero.style.backgroundImage = "linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(" + images[i] + ")";
-      i = i + 1;
-      if (i == images.length) {
-        i =  0;
-      }
+setInterval(function () {
+  wrapHero.style.backgroundImage = "linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(" + images[i] + ")";
+  i = i + 1;
+  if (i == images.length) {
+    i = 0;
+  }
 }, 5000);
 
 // Slider reviews
@@ -25,15 +25,15 @@ boxReview.appendChild(reviewText);
 const dataReview = [`"Spedizioni sempre puntuali!"`, `"Sempre una garanzia, ottimi prodotti tutti originali!"`, `"Vasta scelta di prodotti e diverse taglie disponibili"`];
 
 let index = 0;
-setInterval(function() {
-    reviewText.innerHTML = `${dataReview[index]} <br> ⭐⭐⭐`;
-    index = index + 1;
-    if (index == dataReview.length) {
-      index = 0;
-    }
+setInterval(function () {
+  reviewText.innerHTML = `${dataReview[index]} <br> ⭐⭐⭐`;
+  index = index + 1;
+  if (index == dataReview.length) {
+    index = 0;
+  }
 }, 5000);
 
-   
+
 function setCartProductsNum() {
   cartProductsNum.textContent = `Numero prodotti: ${cartList.length}`;
 }
@@ -58,11 +58,11 @@ function createProduct(parent, imgUrl, productTitle, textPrice, idProduct) {
       )
     );
     setCartProductsNum();
-    
+
 
     modaleCart.classList.toggle("modale-on");
     modale.innerHTML = `Prodotto aggiunto al carrello! <br> Numero prodotti: ${cartList.length}`;
-    setTimeout(() => {modaleCart.classList.toggle("modale-on")}, 2000);
+    setTimeout(() => { modaleCart.classList.toggle("modale-on") }, 2000);
     // Nel caso in cui volessimo aggiungere una interazione col LocalStorage
     localStorage.setItem("totCartitems", cartList.length);
   });
@@ -97,6 +97,32 @@ function renderProducts(listItems) {
       product.id
     );
   });
+}
+
+// Aggiunta dei buttons che mettono i prodotti in ordine alfabetico o di prezzo
+
+const btnOrderAZ = document.querySelector("#btnAZ");
+const btnPrice = document.querySelector("#btnPrice");
+
+
+btnOrderAZ.addEventListener("click", () =>{
+    removeParent(wrapperProducts);   
+
+    productsList.sort((titleOne, titleTwo) => (titleOne.title > titleTwo.title) ? 1 : -1);
+    renderProducts(productsList);        
+}) 
+
+btnPrice.addEventListener("click", () =>{
+    removeParent(wrapperProducts);   
+
+    productsList.sort((priceOne, priceTwo) => (priceOne.price > priceTwo.price) ? 1 : -1);
+    renderProducts(productsList);        
+}) 
+
+function removeParent(parent){
+    while (parent.firstChild) {
+        parent.firstChild.remove();
+    }    
 }
 
 // Async await
