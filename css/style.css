@@ -109,6 +109,10 @@ header{
   transition: all 0.5s ease;
 }
 
+.intestazione{
+  color: #c89ae4;
+}
+
 .intestazione h2{
   font-size: 90px;
 }
@@ -140,6 +144,12 @@ header{
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.btn-cart{
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .cart p{
