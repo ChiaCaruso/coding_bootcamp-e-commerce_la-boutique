@@ -3,6 +3,8 @@
 
 <img src="./img/hero.png" alt="cart" height="400">
 
+<hr/>
+
 ### Realizzato con :heart: utilizzando HTML, CSS e Vanilla JS!
 
 #### Le funzionalità implementate sono:
